@@ -1,0 +1,39 @@
+#
+# lakeshore224.proto
+#
+# Basic Message Structure
+#  <command><space><parameter data><terminator>
+#  <query><?><space><parameter data><terminator>
+#
+# Default Port Settings
+#  baud      - 57,600
+#  data      - 7
+#  start     - 1
+#  stop      - 1
+#  parity    - odd
+#  flowctl   - none
+#  handshake - none
+#
+# Author: Wesley Moore (wmoore@jlab.org)
+# Date:   June 2017
+#
+
+#######################################
+Terminator   = LF;
+writetimeout = 100;     # milliseconds
+readtimeout  = 500;
+replytimeout = 1000;
+ExtraInput   = Ignore;
+#######################################
+
+# input: A,B,C1-C5,D1-D5
+getTemp {
+    out "CRDG? \$1";
+    in  "%f";
+}
+
+getTempStat {
+    out "RDGST? \$1";
+    in  "%d";
+}
+

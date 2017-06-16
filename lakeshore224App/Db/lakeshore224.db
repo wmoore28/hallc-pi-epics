@@ -1,0 +1,40 @@
+#
+#
+# Lake Shore 224, 12-channel Temperature Monitor
+#
+# Author: Wesley Moore (wmoore@jlab.org)
+# Date:   June 2017
+#
+
+record(asyn, "$(P)$(R)asyn") {
+    field(PORT, "$(PORT)")
+    field(OEOS, "\n")
+    field(IEOS, "\n")
+}
+
+record(ai, "$(P)$(R)TEMP_A") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(A) $(PORT)")
+    field(SCAN, "1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(mbbi, "$(P)$(R)TEMP_A_STAT") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTempStat(A) $(PORT)")
+    field(SCAN, "1 second")
+    field(ZRVL, "0")
+    field(ZRST, "Valid Reading")
+    field(ONVL, "1")
+    field(ONST, "Invalid Reading")
+    field(TWVL, "16")
+    field(TWST, "Temp Underrange")
+    field(THVL, "32")
+    field(THST, "Temp Overrange")
+    field(FRVL, "64")
+    field(FRST, "Sensor Units Zero")
+    field(FVVL, "128")
+    field(FVST, "Sensor Units Overrange")
+}
+
