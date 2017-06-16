@@ -1,0 +1,2 @@
+setenv EPICS_BASE /usr/local/epics/base
+setenv PATH $EPICS_BASE/bin/linux-arm:${PATH}
