@@ -1,0 +1,11 @@
+#######################################
+# File Type Definitions
+#######################################
+# streamDevice
+FILE_TYPE += PROTO
+INSTALL_PROTO = $(INSTALL_LOCATION)/proto
+
+# autosave
+FILE_TYPE += REQ
+INSTALL_REQ = $(INSTALL_LOCATION)/req
+
