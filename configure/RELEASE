@@ -27,7 +27,7 @@ MODULES    = $(EPICS_BASE)/../modules
 SUPPORT    = $(EPICS_BASE)/../synApps_5_8/support
 EPICS_EXTENSIONS = $(EPICS_BASE)/../extensions
 
-# Community modules and synApps
+# Include community modules and synApps
 -include $(MODULES)/configure/RELEASE
 -include $(SUPPORT)/configure/RELEASE
 
