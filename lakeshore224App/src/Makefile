@@ -14,7 +14,7 @@ DBD += lakeshore224.dbd
 lakeshore224_DBD += base.dbd
 lakeshore224_DBD += stream.dbd
 lakeshore224_DBD += asyn.dbd
-lakeshore224_DBD += drvAsynSerialPort.dbd
+lakeshore224_DBD += drvAsynIPPort.dbd
 
 # lakeshore224_registerRecordDeviceDriver.cpp derives from lakeshore224.dbd
 lakeshore224_SRCS += lakeshore224_registerRecordDeviceDriver.cpp
