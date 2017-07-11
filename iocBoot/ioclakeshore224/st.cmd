@@ -1,6 +1,7 @@
 #!../../bin/linux-arm/lakeshore224
 ############################################################################
 < envPaths
+epicsEnvSet("STREAM_PROTOCOL_PATH","${TOP}/proto")
 ############################################################################
 cd "${TOP}"
 
@@ -16,12 +17,12 @@ asynSetOption("USB0", -1, "stop", "1")
 asynSetOption("USB0", -1, "parity", "odd")
 asynSetOption("USB0", -1, "clocal", "Y")
 asynSetOption("USB0", -1, "crtscts", "N")
-asynOctetSetOutputEos("USB0", "\n")
-asynOctetSetInputEos("USB0", "\n")
+asynOctetSetOutputEos("USB0", 0, "\n")
+asynOctetSetInputEos("USB0", 0, "\n")
 
 ## Port debugging
-asynSetTraceMask("USB0",-1,0x9)
-asynSetTraceIOMask("USB0",-1,0x2)
+asynSetTraceMask("USB0", -1, 0x9)
+asynSetTraceIOMask("USB0", -1, 0x2)
 
 ## Load record instances
 #dbLoadRecords("${DEVIOCSTATS}/db/iocAdminSoft.db", "IOC=${IOC}")
