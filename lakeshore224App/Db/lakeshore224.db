@@ -15,7 +15,95 @@ record(asyn, "$(P)$(R)asyn") {
 record(ai, "$(P)$(R)TEMP_A") {
     field(DTYP, "stream")
     field(INP,  "@lakeshore224.proto getTemp(A) $(PORT)")
-    field(SCAN, "1 second")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_B") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(B) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_C1") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(C1) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_C2") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(C2) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_C3") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(C3) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_C4") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(C4) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_C5") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(C5) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_D1") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(D1) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_D2") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(D2) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_D3") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(D3) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_D4") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(D4) $(PORT)")
+    field(SCAN, ".1 second")
+    field(PREC, "2")
+    field(EGU,  "C")
+}
+
+record(ai, "$(P)$(R)TEMP_D5") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTemp(D5) $(PORT)")
+    field(SCAN, ".1 second")
     field(PREC, "2")
     field(EGU,  "C")
 }
