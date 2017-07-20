@@ -1,9 +1,12 @@
 #
 # newport2936R.proto
 #
-# Basic Message Structure
-#  <command><space><parameter data><terminator>
-#  <query><?><space><parameter data><terminator>
+# Notes
+#  Ensure echo is turned off.  Otherwise, response parsing may not work 
+#  correctly.
+#
+#  There is not a way to query by channel.  Set channel of interest before 
+#  sending the query.
 #
 # Default Port Settings
 #  baud      - 38,400
@@ -28,7 +31,7 @@ setEcho {
     out "ECHO \$1";
 }
 
-# input: A,B
+# input: channel number (1,2)
 getPwr {
     out "PM:CHAN \$1;PM:P?";
     in  "%f";
