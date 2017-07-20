@@ -1,0 +1,4 @@
+record(ai, "$(P)$(R)TEMP") {
+    field(EGU,  "C")
+    field(PREC, "2")
+}
