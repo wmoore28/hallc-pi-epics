@@ -23,4 +23,5 @@ envPaths
 iocBoot/*/*pv.list
 iocBoot/*/info_positions.req
 iocBoot/*/info_settings.req
-
+iocBoot/*/info_positions.sav*
+iocBoot/*/info_settings.sav*
