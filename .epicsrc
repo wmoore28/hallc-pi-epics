@@ -1,2 +1,4 @@
 setenv EPICS_BASE /usr/local/epics/R3.14.12.6/base
-setenv PATH $EPICS_BASE/bin/linux-arm:${PATH}
+setenv EPICS_HOST_ARCH linux-arm
+setenv PATH ${EPICS_BASE}/bin/${EPICS_HOST_ARCH}:${PATH}
+setenv PATH ${EPICS_BASE}/../extensions/bin/${EPICS_HOST_ARCH}:${PATH}
