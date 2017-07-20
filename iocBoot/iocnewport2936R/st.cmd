@@ -21,6 +21,9 @@ asynSetOption("SER0", -1, "stop",  "1")
 #asynSetTraceIOMask("SER0", -1, 0x2)
 
 ## Load record instances
+dbLoadRecords("${DEVIOCSTATS}/db/iocAdminSoft.db", "IOC=${IOC}")
+dbLoadRecords("${AUTOSAVE}/asApp/Db/save_restoreStatus.db", "P=${IOC}:")
+#
 dbLoadRecords("db/newport2936R.db", "P=C_LASER:,R=DAQ:,PORT=SER0")
 
 cd "${TOP}/iocBoot/${IOC}"
@@ -28,7 +31,7 @@ dbl > pv.list
 iocInit
 
 ## Handle autosave 'commands' contained in loaded databases
-#makeAutosaveFiles()
-#create_monitor_set("info_positions.req", 5)
-#create_monitor_set("info_settings.req", 30)
+makeAutosaveFiles()
+create_monitor_set("info_positions.req", 5)
+create_monitor_set("info_settings.req", 30)
 
