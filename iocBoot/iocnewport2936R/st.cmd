@@ -17,8 +17,8 @@ asynSetOption("SER0", -1, "parity" "none")
 asynSetOption("SER0", -1, "stop",  "1")
 
 ## Port debugging
-asynSetTraceMask("SER0", -1, 0x9)
-asynSetTraceIOMask("SER0", -1, 0x2)
+#asynSetTraceMask("SER0", -1, 0x9)
+#asynSetTraceIOMask("SER0", -1, 0x2)
 
 ## Load record instances
 dbLoadRecords("db/newport2936R.db", "P=C_LASER:,R=DAQ:,PORT=SER0")
