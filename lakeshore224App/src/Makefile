@@ -12,6 +12,8 @@ DBD += lakeshore224.dbd
 
 # lakeshore224.dbd will include these files:
 lakeshore224_DBD += base.dbd
+lakeshore224_DBD += asSupport.dbd
+lakeshore224_DBD += devIocStats.dbd
 lakeshore224_DBD += stream.dbd
 lakeshore224_DBD += asyn.dbd
 lakeshore224_DBD += drvAsynIPPort.dbd
@@ -24,6 +26,8 @@ lakeshore224_SRCS_DEFAULT += lakeshore224Main.cpp
 lakeshore224_SRCS_vxWorks += -nil-
 
 # Link in the code from our support library
+lakeshore224_LIBS += autosave
+lakeshore224_LIBS += devIocStats
 lakeshore224_LIBS += stream
 lakeshore224_LIBS += asyn
 lakeshore224_LIBS += $(EPICS_BASE_IOC_LIBS)
