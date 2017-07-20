@@ -22,7 +22,7 @@ record(ai, "$(P)$(R)PWR_A") {
     field(DTYP, "stream")
     field(INP,  "@newport2936R.proto getPwr(1) $(PORT)")
     field(ASLO, "1000")
-    field(SCAN, "1 second")
+    field(SCAN, ".1 second")
     field(PREC, "2")
     field(EGU,  "mW")
 }
@@ -31,7 +31,7 @@ record(ai, "$(P)$(R)PWR_B") {
     field(DTYP, "stream")
     field(INP,  "@newport2936R.proto getPwr(2) $(PORT)")
     field(ASLO, "1000")
-    field(SCAN, "1 second")
+    field(SCAN, ".1 second")
     field(PREC, "2")
     field(EGU,  "mW")
 }
