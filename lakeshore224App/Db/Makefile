@@ -4,7 +4,7 @@ include $(TOP)/configure/CONFIG
 #  ADD MACRO DEFINITIONS BELOW HERE
 
 # Install databases, templates & substitutions like this
-DB 	  += lakeshore224.db
+DB    += lakeshore224.db
 PROTO += lakeshore224.proto
 
 # If <anyname>.db template is not named <anyname>*.template add
