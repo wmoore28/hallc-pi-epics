@@ -1,0 +1,36 @@
+#
+# newport2936R.proto
+#
+# Basic Message Structure
+#  <command><space><parameter data><terminator>
+#  <query><?><space><parameter data><terminator>
+#
+# Default Port Settings
+#  baud      - 38,400
+#  data      - 8
+#  stop      - 1
+#  parity    - none
+#
+# Author: Wesley Moore (wmoore@jlab.org)
+# Date:   July 2017
+#
+
+#######################################
+Terminator   = CR ;
+writetimeout = 100;     # milliseconds
+readtimeout  = 500;
+replytimeout = 1000;
+ExtraInput   = Ignore;
+#######################################
+
+# input: 0=off, 1=on
+setEcho {
+    out "ECHO \$1";
+}
+
+# input: A,B
+getPwr {
+    out "PM:CHAN \$1;PM:P?";
+    in  "%f";
+}
+

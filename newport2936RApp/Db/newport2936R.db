@@ -1,0 +1,36 @@
+#
+#
+# Newport 2936-R, Dual-channel Power Meter
+#
+# Author: Wesley Moore (wmoore@jlab.org)
+# Date:   July 2017
+#
+
+record(asyn, "$(P)$(R)asyn") {
+    field(PORT, "$(PORT)")
+    field(OEOS, "\n")
+    field(IEOS, "\n")
+}
+
+record(bo, "$(P)$(R)ECHO_OFF") {
+    field(DTYP, "stream")
+    field(OUT,  "@newport2936R.proto setEcho(0) $(PORT)")
+    field(PINI, "YES")
+}
+
+record(ai, "$(P)$(R)PWR_A") {
+    field(DTYP, "stream")
+    field(INP,  "@newport2936R.proto getPwr(1) $(PORT)")
+    field(SCAN, "1 second")
+    field(PREC, "2")
+    field(EGU,  "W")
+}
+
+record(ai, "$(P)$(R)PWR_B") {
+    field(DTYP, "stream")
+    field(INP,  "@newport2936R.proto getPwr(2) $(PORT)")
+    field(SCAN, "1 second")
+    field(PREC, "2")
+    field(EGU,  "W")
+}
+
