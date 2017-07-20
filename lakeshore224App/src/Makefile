@@ -24,7 +24,6 @@ lakeshore224_SRCS_DEFAULT += lakeshore224Main.cpp
 lakeshore224_SRCS_vxWorks += -nil-
 
 # Link in the code from our support library
-lakeshore224_LIBS += lakeshore224Support
 lakeshore224_LIBS += stream
 lakeshore224_LIBS += asyn
 lakeshore224_LIBS += $(EPICS_BASE_IOC_LIBS)
