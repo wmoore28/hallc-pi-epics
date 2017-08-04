@@ -30,6 +30,9 @@ cd "${TOP}/iocBoot/${IOC}"
 dbl > pv.list
 iocInit
 
+## sequencers
+seq poll
+
 ## Handle autosave 'commands' contained in loaded databases
 makeAutosaveFiles()
 create_monitor_set("info_positions.req", 5)
