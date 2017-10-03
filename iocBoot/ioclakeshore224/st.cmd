@@ -19,7 +19,7 @@ drvAsynIPPortConfigure("ETH0","169.254.7.12:7777",0,0,0)
 ## Load record instances
 dbLoadRecords("${DEVIOCSTATS}/db/iocAdminSoft.db", "IOC=${IOC}")
 dbLoadRecords("${AUTOSAVE}/asApp/Db/save_restoreStatus.db", "P=${IOC}:")
-dbLoadRecords("db/lakeshore224.db", "P=C_LASERDAQ, R=TEMP:, PORT=ETH0"
+dbLoadRecords("db/lakeshore224.db", "P=C_LASER:, R=DAQ:, PORT=ETH0")
 
 cd "${TOP}/iocBoot/${IOC}"
 dbl > pv.list
