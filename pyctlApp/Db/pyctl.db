@@ -1,0 +1,13 @@
+#
+# Interface with python apps for controls data recording
+#
+record(bi, "$(P)$(R)REC") {
+    field(ZNAM, "Off")
+    field(ONAM, "On")
+}
+
+record(bi, "$(P)$(R)SPD") {
+    field(ZNAM, "Low")
+    field(ONAM, "High")
+}
+
