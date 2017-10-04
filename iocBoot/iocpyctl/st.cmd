@@ -12,5 +12,5 @@ pyctl_registerRecordDeviceDriver(pdbbase)
 dbLoadRecords("db/pyctl.db", "P=C_LASER:,R=DAQ:")
 
 cd "${TOP}/iocBoot/${IOC}"
-dbl > pv.list
+dbl > /logs/${IOC}.pvlist
 iocInit

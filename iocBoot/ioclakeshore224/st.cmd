@@ -22,7 +22,7 @@ dbLoadRecords("${AUTOSAVE}/asApp/Db/save_restoreStatus.db", "P=${IOC}:")
 dbLoadRecords("db/lakeshore224.db", "P=C_LASER:, R=DAQ:, PORT=ETH0")
 
 cd "${TOP}/iocBoot/${IOC}"
-dbl > pv.list
+dbl > /logs/${IOC}.pvlist
 iocInit
 
 ## Handle autosave 'commands' contained in loaded databases
