@@ -2,5 +2,5 @@
 
 import epics
 
-print epics.caget("C_LASERDAQ:TEMP_A")
+print epics.caget("C_LASER:DAQ:TEMP_A")
 exit()
