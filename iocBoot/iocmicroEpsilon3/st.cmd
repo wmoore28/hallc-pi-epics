@@ -12,5 +12,5 @@ microEpsilon_registerRecordDeviceDriver(pdbbase)
 dbLoadRecords("db/microEpsilonCTL.db", "P=C_LASER, R=DAQ3:")
 
 cd "${TOP}/iocBoot/${IOC}"
-dbl > pv.list
+dbl > /logs/${IOC}.pvlist
 iocInit

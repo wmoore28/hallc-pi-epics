@@ -27,7 +27,7 @@ dbLoadRecords("${AUTOSAVE}/asApp/Db/save_restoreStatus.db", "P=${IOC}:")
 dbLoadRecords("db/newport2936R.db", "P=C_LASER:,R=DAQ:,PORT=SER0")
 
 cd "${TOP}/iocBoot/${IOC}"
-dbl > pv.list
+dbl > /logs/${IOC}.pvlist
 iocInit
 
 ## sequencers
