@@ -10,7 +10,7 @@ dbLoadDatabase("dbd/lakeshore224.dbd")
 lakeshore224_registerRecordDeviceDriver(pdbbase)
 
 ## Port config
-drvAsynIPPortConfigure("ETH0","169.254.7.12:7777",0,0,0)
+drvAsynIPPortConfigure("ETH0","129.57.212.48:7777",0,0,0)
 
 ## Port debugging
 #asynSetTraceMask("ETH0", -1, 0x9)
