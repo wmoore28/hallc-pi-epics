@@ -5,8 +5,8 @@ import datetime
 import serial
 #import epics
 
-#record_pv = epics.PV("C_LASER:DAQ:REC")        # 0=off, 1=on
-#speed_pv  = epics.PV("C_LASER:DAQ:SPD")        # 0=low, 1=high
+record_pv = epics.PV("C_LASER:DAQ:REC")        # 0=off, 1=on
+speed_pv  = epics.PV("C_LASER:DAQ:SPD")        # 0=low, 1=high
 
 ser=serial.Serial('/dev/ttyUSB0',
                   baudrate=9600,
@@ -28,9 +28,9 @@ while True:
     	s=ser.read(2)																	# reading response 2 bytes
     	y=datetime.datetime.now()											#timestamp
     	x=(int(s.encode('hex'),16)-1000)/10						# converting to hex, see CTLM manual
-      if record_pv.value==1:
+        if record_pv.value==1:
     	   f.write("%s %s\n" %(x,y))									# writing to file
-			if sleep_pv.value==0:
+	if speed_pv.value==0:
     	   time.sleep(0.2)
 print counter
 ser.close()
