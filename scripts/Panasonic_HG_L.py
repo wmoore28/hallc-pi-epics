@@ -4,7 +4,7 @@ import time
 import datetime
 import serial
 
-ser=serial.Serial('/dev/ttyUSB2',
+ser=serial.Serial('/dev/ttyUSB1',
                   baudrate=115200,
                   parity=serial.PARITY_NONE,
                   stopbits=serial.STOPBITS_ONE,
@@ -26,14 +26,14 @@ data7="%01#RMD**\r"
 data8="%01#WSP+00002**\r"
 data9="%01#RSP**\r"
 #ser.close()
-f=open('/home/pi/Desktop/Python_code/panasonic_2_slow','w')
+f=open('/home/pi/Desktop/panasonic_2_slow','w')
 start = time.time()
 #print start
-#while (time.time() - start) <= 3.0:
+while (time.time() - start) <= 3.0:
 #while counter <= 0:
-while True:
+#while True:
     #ser.open()
-    time.sleep(0.2)
+    #time.sleep(0.2)
     ser.write(data7)# query
     counter +=1
     counter1 +=1
@@ -45,7 +45,7 @@ while True:
     #x=s.encode('hex')# converting to hex
     #print s
     #print s.encode('ascii')
-    f.write("%s %s\n" %(s,y))# writing to file
+    #f.write("%s %s\n" %(s,y))# writing to file
     #print counter
     
 print counter
