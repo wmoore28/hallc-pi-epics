@@ -9,7 +9,7 @@ dbLoadDatabase("dbd/microEpsilon.dbd")
 microEpsilon_registerRecordDeviceDriver(pdbbase)
 
 ## Load record instances
-dbLoadRecords("db/microEpsilonCTL.db", "P=C_LASER, R=DAQ3:")
+dbLoadRecords("db/microEpsilonCTL.db", "P=C_LASER:, R=DAQ3:")
 
 cd "${TOP}/iocBoot/${IOC}"
 dbl > /logs/${IOC}.pvlist
