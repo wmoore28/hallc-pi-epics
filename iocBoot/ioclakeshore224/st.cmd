@@ -1,4 +1,4 @@
-#!../../bin/linux-arm/lakeshore224
+#!../../bin/linux-x86_64/lakeshore224
 ############################################################################
 < envPaths
 epicsEnvSet("STREAM_PROTOCOL_PATH","${TOP}/proto")
