@@ -1,12 +1,12 @@
 
 file {
-	name="/home/wmoore/apps/op/ALL.adl"
+	name="/tmp/ALL.adl"
 	version=030114
 }
 display {
 	object {
-		x=521
-		y=237
+		x=544
+		y=84
 		width=350
 		height=600
 	}
@@ -156,21 +156,6 @@ text {
 }
 "text update" {
 	object {
-		x=129
-		y=349
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ2:TEMP"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
 		x=236
 		y=349
 		width=97
@@ -194,24 +179,24 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="MicroEpsilon"
+	textix="MicroEpsilon (pi3)"
 }
 text {
 	object {
 		x=7
-		y=388
+		y=393
 		width=100
 		height=20
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Newport"
+	textix="Newport (pi1)"
 }
 "text update" {
 	object {
 		x=21
-		y=411
+		y=429
 		width=97
 		height=26
 	}
@@ -225,28 +210,13 @@ text {
 }
 "text update" {
 	object {
-		x=236
-		y=411
+		x=129
+		y=429
 		width=97
 		height=26
 	}
 	monitor {
 		chan="C_LASER:DAQ:PWR_B"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=129
-		y=411
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:ECHO_OFF"
 		clr=0
 		bclr=12
 	}
@@ -263,12 +233,12 @@ text {
 	"basic attribute" {
 		clr=14
 	}
-	textix="Lakeshore"
+	textix="Lakeshore (pi1)"
 }
 "text update" {
 	object {
 		x=21
-		y=124
+		y=146
 		width=97
 		height=26
 	}
@@ -282,8 +252,8 @@ text {
 }
 "text update" {
 	object {
-		x=236
-		y=124
+		x=21
+		y=173
 		width=97
 		height=26
 	}
@@ -298,7 +268,7 @@ text {
 "text update" {
 	object {
 		x=129
-		y=124
+		y=146
 		width=97
 		height=26
 	}
@@ -313,7 +283,7 @@ text {
 "text update" {
 	object {
 		x=21
-		y=155
+		y=236
 		width=97
 		height=26
 	}
@@ -328,7 +298,7 @@ text {
 "text update" {
 	object {
 		x=129
-		y=155
+		y=236
 		width=97
 		height=26
 	}
@@ -342,128 +312,8 @@ text {
 }
 "text update" {
 	object {
-		x=129
-		y=186
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_D2"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
 		x=21
-		y=186
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_C2"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=21
-		y=217
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_C3"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=129
-		y=217
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_D3"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=129
-		y=248
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_D4"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=21
-		y=248
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_C4"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=21
-		y=279
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_C5"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=129
-		y=279
-		width=97
-		height=26
-	}
-	monitor {
-		chan="C_LASER:DAQ:TEMP_D5"
-		clr=0
-		bclr=12
-	}
-	limits {
-	}
-}
-"text update" {
-	object {
-		x=21
-		y=482
+		y=499
 		width=97
 		height=26
 	}
@@ -478,12 +328,150 @@ text {
 text {
 	object {
 		x=7
-		y=458
+		y=475
 		width=100
 		height=20
 	}
 	"basic attribute" {
 		clr=14
 	}
-	textix="Panasonic"
+	textix="Panasonic (pi2)"
+}
+"text update" {
+	object {
+		x=129
+		y=173
+		width=97
+		height=26
+	}
+	monitor {
+		chan="C_LASER:DAQ:TEMP_B_STAT"
+		clr=0
+		bclr=12
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=21
+		y=263
+		width=97
+		height=26
+	}
+	monitor {
+		chan="C_LASER:DAQ:TEMP_C1_STAT"
+		clr=0
+		bclr=12
+	}
+	limits {
+	}
+}
+"text update" {
+	object {
+		x=129
+		y=263
+		width=97
+		height=26
+	}
+	monitor {
+		chan="C_LASER:DAQ:TEMP_D1_STAT"
+		clr=0
+		bclr=12
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=21
+		y=128
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=128
+		y=129
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=21
+		y=220
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="C1"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=128
+		y=221
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="D1"
+	align="horiz. centered"
+}
+"text update" {
+	object {
+		x=129
+		y=349
+		width=97
+		height=26
+	}
+	monitor {
+		chan="C_LASER:DAQ2:TEMP"
+		clr=0
+		bclr=12
+	}
+	limits {
+	}
+}
+text {
+	object {
+		x=21
+		y=414
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="A"
+	align="horiz. centered"
+}
+text {
+	object {
+		x=128
+		y=414
+		width=97
+		height=20
+	}
+	"basic attribute" {
+		clr=14
+	}
+	textix="B"
+	align="horiz. centered"
 }
