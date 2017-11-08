@@ -19,7 +19,7 @@ ser=serial.Serial('/dev/ttyUSB2',
 
 print(ser.isOpen) 			# checking if serial port is open
 data1="\x01"				# command to read temp 2 bytes in hex
-f=open('/data/CTLM2H1_USB2', 'a', buffering=0)
+f=open('/data/CTLM2H1_USB2.dat', 'a', buffering=0)
 while True:
     ser.write(data1)
     s=ser.read(2)			    # reading response 2 bytes
