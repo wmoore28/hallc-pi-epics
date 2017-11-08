@@ -3,15 +3,18 @@
 import time
 import datetime
 import serial
+#import epics
 
-ser=serial.Serial('/dev/ttyUSB1',
+#data_pv = epics.PV("C_LASER:DAQ:DISPLACEMENT")
+
+ser=serial.Serial('/dev/ttyUSB0',
                   baudrate=115200,
                   parity=serial.PARITY_NONE,
                   stopbits=serial.STOPBITS_ONE,
                   bytesize=serial.EIGHTBITS,
                   timeout=2
-                
                   )
+
 print(ser.isOpen) # checking if serial port is open
 counter=0
 counter1=0
@@ -26,12 +29,12 @@ data7="%01#RMD**\r"
 data8="%01#WSP+00002**\r"
 data9="%01#RSP**\r"
 #ser.close()
-f=open('/home/pi/Desktop/panasonic_2_slow','w')
+f=open('/data/panasonic_2_slow','a')
 start = time.time()
 #print start
-while (time.time() - start) <= 3.0:
+#while (time.time() - start) <= 3.0:
 #while counter <= 0:
-#while True:
+while True:
     #ser.open()
     #time.sleep(0.2)
     ser.write(data7)# query
@@ -43,9 +46,10 @@ while (time.time() - start) <= 3.0:
     #    print s
     #    counter1=0
     #x=s.encode('hex')# converting to hex
-    #print s
+    print s
     #print s.encode('ascii')
-    #f.write("%s %s\n" %(s,y))# writing to file
+#    data_pv.value=s
+    f.write("%s %s\n" %(s,y))# writing to file
     #print counter
     
 print counter
