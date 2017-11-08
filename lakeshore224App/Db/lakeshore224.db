@@ -126,3 +126,56 @@ record(mbbi, "$(P)$(R)TEMP_A_STAT") {
     field(FVST, "Sensor Units Overrange")
 }
 
+record(mbbi, "$(P)$(R)TEMP_B_STAT") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTempStat(B) $(PORT)")
+    field(SCAN, "1 second")
+    field(ZRVL, "0")
+    field(ZRST, "Valid Reading")
+    field(ONVL, "1")
+    field(ONST, "Invalid Reading")
+    field(TWVL, "16")
+    field(TWST, "Temp Underrange")
+    field(THVL, "32")
+    field(THST, "Temp Overrange")
+    field(FRVL, "64")
+    field(FRST, "Sensor Units Zero")
+    field(FVVL, "128")
+    field(FVST, "Sensor Units Overrange")
+}
+
+record(mbbi, "$(P)$(R)TEMP_C1_STAT") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTempStat(C1) $(PORT)")
+    field(SCAN, "1 second")
+    field(ZRVL, "0")
+    field(ZRST, "Valid Reading")
+    field(ONVL, "1")
+    field(ONST, "Invalid Reading")
+    field(TWVL, "16")
+    field(TWST, "Temp Underrange")
+    field(THVL, "32")
+    field(THST, "Temp Overrange")
+    field(FRVL, "64")
+    field(FRST, "Sensor Units Zero")
+    field(FVVL, "128")
+    field(FVST, "Sensor Units Overrange")
+}
+
+record(mbbi, "$(P)$(R)TEMP_D1_STAT") {
+    field(DTYP, "stream")
+    field(INP,  "@lakeshore224.proto getTempStat(D1) $(PORT)")
+    field(SCAN, "1 second")
+    field(ZRVL, "0")
+    field(ZRST, "Valid Reading")
+    field(ONVL, "1")
+    field(ONST, "Invalid Reading")
+    field(TWVL, "16")
+    field(TWST, "Temp Underrange")
+    field(THVL, "32")
+    field(THST, "Temp Overrange")
+    field(FRVL, "64")
+    field(FRST, "Sensor Units Zero")
+    field(FVVL, "128")
+    field(FVST, "Sensor Units Overrange")
+}
