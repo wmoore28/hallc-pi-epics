@@ -1,0 +1,4 @@
+record(ai, "$(P)$(R)DISPLACEMENT") {
+    field(EGU,  "")
+    field(PREC, "2")
+}

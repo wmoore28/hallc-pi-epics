@@ -1,5 +1,7 @@
-setenv EPICS_BASE /usr/local/epics/R3.14.12.6/base
-setenv EPICS_HOST_ARCH linux-arm
+setenv EPICS_BASE /usr/local/epics/base
+setenv EPICS_HOST_ARCH `${EPICS_BASE}/startup/EpicsHostArch`
 setenv PATH ${EPICS_BASE}/bin/${EPICS_HOST_ARCH}:${PATH}
 setenv PATH ${EPICS_BASE}/../extensions/bin/${EPICS_HOST_ARCH}:${PATH}
 setenv LD_LIBRARY_PATH ${EPICS_BASE}/lib/${EPICS_HOST_ARCH}
+
+setenv EPICS_CA_ADDR_LIST "129.57.215.255"
