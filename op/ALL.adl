@@ -5,8 +5,8 @@ file {
 }
 display {
 	object {
-		x=544
-		y=84
+		x=967
+		y=67
 		width=350
 		height=600
 	}
@@ -474,4 +474,23 @@ text {
 	}
 	textix="B"
 	align="horiz. centered"
+}
+"shell command" {
+	object {
+		x=243
+		y=7
+		width=100
+		height=25
+	}
+	command[0] {
+		label="StripTool - Lakeshore224"
+		name="StripTool /data/striptool-configs/Lakeshore224.stp &"
+	}
+	command[1] {
+		label="StripTool - MicroEpsilon"
+		name="StripTool /data/striptool-configs/MicroEpsilons.stp &"
+	}
+	clr=14
+	bclr=4
+	label="StripTool..."
 }
