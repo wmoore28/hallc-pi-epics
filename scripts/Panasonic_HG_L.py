@@ -30,7 +30,7 @@ data7="%01#RMD**\r"
 data8="%01#WSP+00002**\r"
 data9="%01#RSP**\r"
 
-f=open('/data/Panasonic.dat', 'a', buffering=0)
+f=open('/data/Panasonic.dat', 'a')
 try:
     while True:
         ser.write(data7)
